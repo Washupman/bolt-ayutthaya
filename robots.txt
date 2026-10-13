@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://washupman.github.io/bolt-ayutthaya/sitemap.xml
