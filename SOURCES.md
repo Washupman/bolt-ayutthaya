@@ -14,3 +14,13 @@
 **Caution:** Different Bolt public help pages may show inconsistent motorcycle engine thresholds. This site intentionally does **not** publish an unverified universal cc limit. Recheck in the current application flow.
 
 **Referral URL:** https://partners.bolt.eu?refid=AAA1046694 (configured verbatim in CTA anchors). Referral attribution / final redirect requires end-to-end verification in a real browser and cannot be inferred from the anchor alone.
+
+## Referral and promotional disclosure (13 October 2026)
+
+- Official Bolt Thailand driver referral guide: https://bolt.eu/th-th/driver/guide/referral/
+  - Advertises an incentive to the **referrer** (up to 500 THB if the invited driver completes 20 trips within 14 days, subject to required paperwork and program conditions). Does not establish an additional guaranteed reward for the **referred new driver**.
+- Official Bolt Thailand driver news: https://bolt.eu/th-th/blog/category/drivers/
+  - Lists separate campaigns for new drivers. Eligibility, dates, and geographic coverage need independent confirmation. Do not market these as exclusively available through this referral link.
+- Signup screenshot observed on 13 October 2026 after following the exact URL, with `AAA1046694` pre-filled. The signup page warns that the referrer can view the referred driver's name, phone number and completed trip count. Treat this as an important privacy disclosure. End-to-end actual registration, conversion attribution and reward eligibility have not been tested.
+
+**Editorial rule:** Advertise benefits we actually provide (free Thai Ayutthaya guide and pre-filled signup flow), not made-up Bolt cash bonuses, faster approval or exclusive rider demand.
