@@ -24,3 +24,19 @@
 - Signup screenshot observed on 13 October 2026 after following the exact URL, with `AAA1046694` pre-filled. The signup page warns that the referrer can view the referred driver's name, phone number and completed trip count. Treat this as an important privacy disclosure. End-to-end actual registration, conversion attribution and reward eligibility have not been tested.
 
 **Editorial rule:** Advertise benefits we actually provide (free Thai Ayutthaya guide and pre-filled signup flow), not made-up Bolt cash bonuses, faster approval or exclusive rider demand.
+
+## In-app referral campaign evidence: 13 October 2026 (user-provided Bolt Driver screenshot)
+
+A screenshot of the driver's **in-app referral campaign terms** confirms a campaign where **both the referring driver and the invited driver** are shown rewards at the following thresholds, each per person:
+
+| Invited driver trip milestone | Referrer | Referred new driver |
+| --- | ---: | ---: |
+| 20 completed trips in 14 days | THB 150 | THB 150 |
+| 60 completed trips in 30 days | THB 300 | THB 300 |
+| 100 completed trips in 30 days | THB 650 | THB 650 |
+
+It also states the referred person must register by **15 October 2026 00:00** (Thailand time assumed given Thai app; UTC 14 October at 17:00). Registration cutoff is the **start**, not the end, of 15 October.
+
+**Do not assume** the milestones stack, that all referred drivers qualify, or that Ayutthaya receives this exact promotion: campaign eligibility, timing and payout rules may be personalized or area-specific, and the screenshot shows only part of the UI. This in-app campaign may differ from the general evergreen Bolt referral guide's 500 THB example at https://bolt.eu/th-th/driver/guide/referral/ . Bolt also posts referral campaign announcements at https://bolt.eu/th-th/blog/driver-referral-bonus/ but the public listing does not confirm these exact in-app tiers.
+
+The site has an automatically hidden campaign section, disabled from 2026-10-15 00:00 ICT via `assets/js/promo.js`. Do not include expired offer amounts as evergreen headlines or search schema. Do not store or republish private Bolt app screenshots.
