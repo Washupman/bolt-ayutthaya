@@ -15,7 +15,12 @@
         if (Date.now() >= expiresAt || dialog.open) return;
         opener = button;
         dialog.showModal();
-        dialog.querySelector('[data-terms-close]')?.focus();
+        // Native dialogs can restore the last scroll position when reopened.
+        // Start every read at clause 1 and keep the header close button focused.
+        const readingArea = dialog.querySelector('.terms-dialog-body');
+        if (readingArea) readingArea.scrollTop = 0;
+        dialog.querySelector('[data-terms-close]')?.focus({ preventScroll: true });
+        if (readingArea) readingArea.scrollTop = 0;
       });
     });
     dialog.querySelectorAll('[data-terms-close]').forEach((button) => {
