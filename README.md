@@ -14,10 +14,13 @@ Thai-language, mobile-first, static informational site for people considering Bo
 - `.nojekyll` — static publishing.
 
 ## Publishing
-GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
+A GitHub Actions workflow lives in `.github/workflows/deploy.yml`. Commits to `main` or a manual workflow dispatch build the static files and attempt to deploy through GitHub Pages.
+
+**First-time repository configuration:** Settings → Pages → Build and deployment → Source: **GitHub Actions**. Verify that the deployment workflow succeeds under **Actions**. A successful commit alone does not prove Pages is live.
+
 Intended public URL: https://washupman.github.io/bolt-ayutthaya/
 
-GitHub commit status does not prove public Pages availability. Verify the site URL and HTTPS separately after deployment.
+Verify the public URL and HTTPS, page links, modal, and direct referral CTA before distributing traffic. No production launch should be claimed without a successful live check.
 
 ## Referral flow
 All principal application CTAs have a direct anchor to:
