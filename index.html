@@ -44,6 +44,7 @@
   </div>
   <div class="campaign-cta-wrap">
     <a class="btn campaign-cta" href="https://partners.bolt.eu?refid=AAA1046694" rel="sponsored noopener noreferrer">สมัครผ่านลิงก์นี้ ก่อนหมดเขต ↗</a>
+    <button type="button" class="terms-open" data-terms-open aria-haspopup="dialog" aria-controls="referral-terms-dialog">อ่านเงื่อนไขโบนัสเพิ่มเติม <span aria-hidden="true">↗</span></button>
     <p class="campaign-deadline">ปิดรับการลงทะเบียนตามเงื่อนไขที่เห็นในแอป <strong>15 ต.ค. 2569 เวลา 00:00 น. (เวลาไทย)</strong><br><small>หมายถึงต้องสมัครให้เสร็จก่อนเริ่มวันที่ 15 ต.ค.</small></p>
   </div>
 </div>
@@ -62,11 +63,41 @@
 </div>
 <div class="campaign-disclaimer">
   <strong>เงื่อนไขสำคัญ:</strong> ข้อมูลมาจากภาพแคมเปญในแอป Bolt Driver วันที่ 13 ต.ค. 2569 ยังไม่ได้ยืนยันว่าสิทธิ์นี้ครอบคลุมผู้สมัครทุกคนหรือทุกจังหวัด การใช้ลิงก์นี้ไม่ได้รับประกันโบนัส การอนุมัติ หรือรายได้ และไม่มีหลักฐานว่า Bolt กำหนดให้ใช้เฉพาะเว็บไซต์นี้เท่านั้น สิทธิ์จริงขึ้นกับ Bolt
-  <a href="#referral-benefits">อ่านรายละเอียดลิงก์แนะนำและความเป็นส่วนตัว ↓</a>
+  <button type="button" class="terms-disclaimer-button" data-terms-open aria-haspopup="dialog" aria-controls="referral-terms-dialog">อ่านเงื่อนไขและความเป็นส่วนตัวฉบับสรุป</button>
 </div>
 </div>
 </section>
 
+<!-- In-page summary from user-shared campaign, not full official Bolt legal terms -->
+<dialog id="referral-terms-dialog" class="terms-dialog" aria-labelledby="terms-title" aria-describedby="terms-description">
+  <div class="terms-dialog-header">
+    <div><span class="terms-kicker">BOLT DRIVER • REFERRAL CAMPAIGN</span><h2 id="terms-title">เงื่อนไขโบนัสผู้สมัครใหม่</h2></div>
+    <button type="button" class="terms-close-icon" data-terms-close aria-label="ปิดเงื่อนไข">✕</button>
+  </div>
+  <div class="terms-dialog-body">
+    <p id="terms-description" class="terms-intro">สรุปจากภาพเงื่อนไขในแอป Bolt Driver ของผู้แนะนำ ณ วันที่ 13 ตุลาคม 2569 <strong>ไม่ใช่เอกสารเงื่อนไขฉบับเต็มที่ Bolt รับรอง</strong></p>
+    <h3>1. ลงทะเบียนให้ทันกำหนด</h3>
+    <p>ผู้ถูกแนะนำต้องลงทะเบียน <strong>ก่อนวันที่ 15 ตุลาคม 2569 เวลา 00:00 น. (เวลาไทย)</strong> ตามข้อความในภาพ ซึ่งหมายถึงก่อนเริ่มวันที่ 15 ตุลาคม ไม่ใช่สิ้นวันนั้น</p>
+    <h3>2. สมัครผ่านลิงก์แนะนำ</h3>
+    <p>กดปุ่มสมัครบนเว็บไซต์นี้เพื่อไปหน้าสมัคร Bolt โดยตรง ลิงก์มีรหัส <strong>AAA1046694</strong> ซึ่งปรากฏในช่องผู้แนะนำอัตโนมัติในการทดสอบก่อนหน้า <strong>ควรตรวจว่ารหัสยังอยู่ก่อนกดถัดไป</strong> เว็บไซต์นี้ไม่ได้รับข้อมูลจากแบบฟอร์มสมัคร</p>
+    <h3>3. จำนวนเที่ยวและโบนัสที่ปรากฏในแอป</h3>
+    <div class="terms-table-wrap"><table class="terms-table"><thead><tr><th scope="col">เที่ยวที่สำเร็จ</th><th scope="col">ผู้สมัครใหม่</th><th scope="col">ผู้แนะนำ</th></tr></thead><tbody>
+      <tr><td>20 เที่ยว ภายใน 14 วัน</td><td>150 บาท</td><td>150 บาท</td></tr>
+      <tr><td>60 เที่ยว ภายใน 30 วัน</td><td>300 บาท</td><td>300 บาท</td></tr>
+      <tr><td>100 เที่ยว ภายใน 30 วัน</td><td>650 บาท</td><td>650 บาท</td></tr>
+    </tbody></table></div>
+    <p class="terms-small">ตัวเลขเป็นโบนัสต่อคนตามแต่ละระดับที่แสดง ยังไม่มีข้อมูลยืนยันว่าโบนัสทั้งสามระดับบวกรวมกันได้ และไม่ทราบจุดเริ่มนับระยะเวลา 14/30 วันอย่างละเอียดจากภาพนี้</p>
+    <h3>4. สิทธิ์และข้อจำกัด</h3>
+    <p>การได้รับโบนัสขึ้นกับเกณฑ์ Bolt เช่น คุณสมบัติผู้สมัคร พื้นที่ แคมเปญ จำนวนเที่ยวที่นับได้ และการตรวจสอบเอกสาร <strong>ยังไม่ได้ยืนยันว่าสิทธิ์นี้ครอบคลุมทุกคนในอยุธยา</strong> หรือมีให้เฉพาะผู้สมัครผ่านเว็บไซต์นี้ การใช้ลิงก์นี้จึงไม่รับประกันโบนัส การอนุมัติ หรือรายได้</p>
+    <h3>5. ข้อมูลที่ผู้แนะนำอาจมองเห็น</h3>
+    <p>หน้าสมัคร Bolt แจ้งว่า ผู้แนะนำสามารถเห็น <strong>ชื่อ หมายเลขโทรศัพท์ และจำนวนเที่ยวที่ทำสำเร็จ</strong> ของผู้ที่สมัครด้วยรหัสแนะนำ โปรดพิจารณาข้อมูลนี้ก่อนดำเนินการสมัคร</p>
+    <p class="terms-identity">เว็บไซต์นี้เป็นคู่มืออิสระ ไม่ใช่เว็บไซต์ทางการของ Bolt ผู้จัดทำอาจได้รับรางวัลจากโปรแกรมแนะนำเมื่อเงื่อนไขครบ สิทธิ์และขั้นตอนสมัครจริงอยู่ภายใต้การพิจารณาของ Bolt</p>
+  </div>
+  <div class="terms-dialog-footer">
+    <button type="button" class="btn btn-outline terms-dismiss" data-terms-close>ปิดเงื่อนไข</button>
+    <a class="btn btn-dark terms-apply" href="https://partners.bolt.eu?refid=AAA1046694" rel="sponsored noopener noreferrer">อ่านแล้ว สมัครขับ Bolt ↗</a>
+  </div>
+</dialog>
 <section class="hero"><div class="wrap hero-inner"><div>
   <div class="eyebrow">พระนครศรีอยุธยา • คู่มือปี 2569</div>
   <h1>สนใจสมัครขับ<br><em>Bolt อยุธยา?</em><br>เริ่มจากตรงนี้</h1>
