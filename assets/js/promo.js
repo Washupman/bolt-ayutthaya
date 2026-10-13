@@ -1,18 +1,44 @@
-/* A time-limited referral offer. Cutoff is 15 Oct 2026, 00:00
-   Thailand time (UTC+07:00), equivalent to 14 Oct 2026 17:00 UTC.
-   No analytics, cookies, storage or network calls. */
+/* Time-limited Bolt referral announcement and accessible in-page terms.
+   Campaign ends 15 Oct 2026, 00:00 Thailand time (2026-10-14T17:00Z).
+   No cookies, analytics, storage, or data collection. */
 (() => {
   const campaign = document.getElementById('referral-promo');
+  const dialog = document.getElementById('referral-terms-dialog');
   if (!campaign) return;
-  const expiry = Date.parse(campaign.dataset.expiresUtc || '');
-  // Fail closed rather than show a possibly expired offer.
-  if (!Number.isFinite(expiry)) return;
-  const updateVisibility = () => {
-    const active = Date.now() < expiry;
-    campaign.hidden = !active;
-    if (!active) clearInterval(interval);
+  const expiresAt = Date.parse(campaign.dataset.expiresUtc || '');
+  if (!Number.isFinite(expiresAt)) return; // fail closed: campaign starts hidden
+
+  let opener = null;
+  if (dialog && typeof dialog.showModal === 'function') {
+    campaign.querySelectorAll('[data-terms-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (Date.now() >= expiresAt || dialog.open) return;
+        opener = button;
+        dialog.showModal();
+        dialog.querySelector('[data-terms-close]')?.focus();
+      });
+    });
+    dialog.querySelectorAll('[data-terms-close]').forEach((button) => {
+      button.addEventListener('click', () => dialog.close());
+    });
+    // The dialog also closes with Escape (native) and clicking outside the content.
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      if (opener?.isConnected && !campaign.hidden) opener.focus();
+      opener = null;
+    });
+  }
+
+  const refresh = () => {
+    const current = Date.now() < expiresAt;
+    campaign.hidden = !current;
+    if (!current) {
+      if (dialog?.open) dialog.close();
+      clearInterval(watch);
+    }
   };
-  // Check immediately and again while an open page crosses the deadline.
-  const interval = setInterval(updateVisibility, 10_000);
-  updateVisibility();
+  const watch = setInterval(refresh, 10_000);
+  refresh();
 })();
