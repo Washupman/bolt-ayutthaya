@@ -40,3 +40,46 @@
 @media(max-width:900px){.campaign-shell{gap:20px;grid-template-columns:minmax(0,1fr) minmax(260px,.85fr)}.campaign-offer{transform:none;padding:22px}.campaign-hero h2{font-size:clamp(2.2rem,4.5vw,3.2rem)}}
 @media(max-width:720px){.campaign-shell{grid-template-columns:1fr;gap:19px;padding-top:34px;padding-bottom:28px}.campaign-hero h2{font-size:clamp(2.3rem,10vw,3.5rem);margin:17px 0}.campaign-lead{font-size:.99rem}.campaign-perks span{font-size:.75rem}.campaign-cta{width:100%;font-size:.97rem}.campaign-offer{padding:22px;border-radius:20px}.campaign-main-number{margin:13px 0 10px}.campaign-main-number strong{font-size:4.35rem}.campaign-disclaimer{font-size:.73rem}.campaign-disclaimer a{display:block;margin:9px 0 0}}
 @media(prefers-reduced-motion:reduce){.campaign-cta:hover{transform:none}}
+
+
+/* Accessible native dialog for in-page campaign terms */
+.terms-open,.terms-disclaimer-button{appearance:none;background:none;border:0;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left;font-weight:750}
+.terms-open{display:inline-flex;align-items:center;gap:7px;color:#e1ffae;margin:16px 0 2px;padding:4px 0;font-size:.88rem}
+.terms-open:hover,.terms-disclaimer-button:hover{color:#fff}
+.terms-disclaimer-button{color:#d5ff80;margin:0 0 0 8px;padding:0;font-size:inherit}
+.terms-open:focus-visible,.terms-disclaimer-button:focus-visible,.terms-close-icon:focus-visible{outline:3px solid #a7ec70;outline-offset:4px}
+.terms-dialog{position:fixed;inset:0;margin:auto;width:min(740px,calc(100% - 26px));max-width:none;max-height:min(88vh,850px);max-height:min(88dvh,850px);padding:0;border:1px solid #e0eae1;border-radius:22px;color:var(--ink);background:#fff;box-shadow:0 35px 100px rgba(0,0,0,.35);overflow:hidden}
+.terms-dialog[open]{display:flex;flex-direction:column}
+.terms-dialog::backdrop{background:rgba(7,18,11,.75);backdrop-filter:blur(4px)}
+.terms-dialog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:23px 27px 19px;background:#eff8eb;border-bottom:1px solid var(--line);flex-shrink:0}
+.terms-kicker{color:var(--brand-dark);font-size:.72rem;font-weight:850;letter-spacing:.045em}
+.terms-dialog h2{font-size:clamp(1.4rem,3.5vw,1.95rem);color:var(--ink);margin:5px 0 0}
+.terms-close-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid #c9dbcb;cursor:pointer;font-size:1rem;flex-shrink:0;color:var(--ink)}
+.terms-close-icon:hover{background:#e1efdc}
+.terms-dialog-body{padding:22px 27px 27px;overflow-y:auto;overscroll-behavior:contain;min-height:0;flex:1}
+.terms-dialog-body h3{font-size:1.05rem;margin:26px 0 9px}
+.terms-dialog-body h3:first-of-type{margin-top:22px}
+.terms-dialog-body p{line-height:1.75;margin:0 0 12px;color:#3f5649}
+.terms-dialog-body strong{color:var(--ink)}
+.terms-intro{padding:13px 15px;background:#f5f8f2;border-left:4px solid #65a96d;border-radius:8px;font-size:.9rem}
+.terms-table-wrap{overflow-x:auto;max-width:100%}
+.terms-table{width:100%;border-collapse:collapse;min-width:370px;font-size:.9rem;margin:10px 0 16px}
+.terms-table th,.terms-table td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left}
+.terms-table th{background:var(--soft);font-weight:800}
+.terms-table td:not(:first-child){font-weight:750;white-space:nowrap}
+.terms-dialog-body .terms-small{font-size:.84rem;color:var(--muted)}
+.terms-dialog-body .terms-identity{font-size:.84rem;background:#faf4e9;padding:15px;border-radius:11px;margin-top:23px}
+.terms-dialog-footer{display:flex;justify-content:flex-end;gap:12px;align-items:center;padding:15px 27px;background:#fff;border-top:1px solid var(--line);flex-shrink:0}
+.terms-dialog-footer .btn{min-height:48px}
+@media(max-width:720px){
+.terms-open{font-size:.86rem;margin-top:13px}
+.terms-disclaimer-button{display:block;margin:8px 0 0}
+.terms-dialog{width:calc(100% - 16px);max-height:94vh;max-height:94dvh;border-radius:16px}
+.terms-dialog-header{padding:16px 18px 13px}
+.terms-dialog-body{padding:15px 18px}
+.terms-dialog-body h3{font-size:1rem;margin-top:22px}
+.terms-dialog-footer{display:grid;grid-template-columns:1fr;gap:9px;padding:12px 18px max(12px,env(safe-area-inset-bottom))}
+.terms-dialog-footer .btn{width:100%}
+.terms-dialog-footer .terms-apply{grid-row:1}
+.terms-dialog-footer .terms-dismiss{grid-row:2}
+}
